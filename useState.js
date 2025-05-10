@@ -27,3 +27,6 @@ setUserData((prevState) => {
     email: "updated@example.com",
   };
 });
+
+// 1. So we can pass a value or an Updater function with setUserData().
+// 2. And the updater function also receive one argument i.e. the previous state of the userData variable (i.e. a shallow copy of it/reference)
