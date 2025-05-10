@@ -1,5 +1,7 @@
 // 1. What can we pass as argument with forEach():
 
+const { useState } = require("react");
+
 // const { useState } = require("react");
 
 array.forEach((element, index, array) => {
@@ -30,3 +32,13 @@ setUserData((prevState) => {
 
 // 1. So we can pass a value or an Updater function with setUserData().
 // 2. And the updater function also receive one argument i.e. the previous state of the userData variable (i.e. a shallow copy of it/reference)
+
+
+// 3. Why we can change here as it's const, 
+    const [userData, setUserData] = useState({
+        name: "",
+        email: ""
+    })
+
+    // Because const [userData, setUserData] ---> is an array which has a veriable and a function().
+    // And in const array we can reassign elements/index value, but can't reassign the array.
